@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "4cb74aba-b5d4-4ec3-a882-35cc7810009b",
+		"name": "serialize-json-with-jackson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27753746"
+	},
+	"item": [
+		{
+			"name": "Car (JACKSON)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/car/jackson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"car",
+						"jackson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car (JSONB)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/car/jsonb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"car",
+						"jsonb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Car (XML)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/car/xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"car",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person (JACKSON)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/person/jackson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"jackson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person (JSONB)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/person/jsonb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"jsonb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person (XML)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/person/xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
