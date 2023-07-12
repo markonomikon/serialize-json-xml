@@ -1,4 +1,4 @@
-package ua.markonomikon.service.rs;
+package ua.markonomikon.serialize.service.rs;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,16 +9,23 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import ua.markonomikon.model.pojo.Person;
+import ua.markonomikon.serialize.model.pojo.Person;
+import ua.markonomikon.serialize.management.AppConstants;
 
-import static ua.markonomikon.management.AppConstants.PERSON_PATH;
+/**
+ * SERVICE: class for Person object
+ */
 
-@Path(PERSON_PATH)
+@Path(AppConstants.PERSON_PATH)
 public class PersonServiceResource {
     @Inject
     ObjectMapper objectMapper;
     @Inject
     Jsonb jsonb;
+
+    /**
+     * JSON: simple GET where we create a Person pojo and map it to json using jackson's ObjectMapper.
+     */
     @GET
     @Path("/jackson")
     @Produces(MediaType.APPLICATION_JSON)
@@ -30,6 +37,10 @@ public class PersonServiceResource {
 
         return objectMapper.writeValueAsString(person);
     }
+
+    /**
+     * JSON: simple GET where we create a Person pojo and map it to json using Jsonb.
+     */
     @GET
     @Path("/jsonb")
     @Produces(MediaType.APPLICATION_JSON)
@@ -42,6 +53,9 @@ public class PersonServiceResource {
         return jsonb.toJson(person);
     }
 
+    /**
+     * XML: simple GET where we create a Person pojo and map it to xml using XmlMapper.
+     */
     @GET
     @Path("/xml")
     @Produces(MediaType.APPLICATION_JSON)
@@ -56,3 +70,12 @@ public class PersonServiceResource {
         return xmlMapper.writeValueAsString(person);
     }
 }
+
+
+
+
+
+
+/*
+ * Created by markonomikon.
+ */
